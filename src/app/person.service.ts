@@ -13,6 +13,9 @@ export class PersonService {
   }
 
   constructor(private http: HttpClient) { }
+    async delay(ms: number){
+      await new Promise(resolve => setTimeout(()=> resolve(), ms));
+    }
 
    getPeopleWeb(): Observable<User[]>{
      return this.http.get<User[]>(this.usersUrl);
@@ -21,6 +24,7 @@ export class PersonService {
      return this.http.post<any>(this.usersUrl, user, this.httpOptions)
    }
    getPeople(){
+     this.delay(4000);
      return ["Big Bird", "Oscar", "Burt"]
    }
 }

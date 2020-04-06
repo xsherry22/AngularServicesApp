@@ -1,0 +1,33 @@
+<div class="container">
+    <h1> User Form </h1>
+    <form (ngSubmit)="onSubmit()" #userForm ="ngForm">
+         <!-- {{ Diagnostic }} -->
+            <h1>{{ currentMessage }}</h1>
+            <input type = "text" required 
+                placeholder = "Name"
+                [(ngModel)] = "model.name"
+                name = "name"/>
+
+            <input type = "text" required 
+                placeholder = "Username"
+                [(ngModel)] = "model.username"
+                name = "username"/>
+
+            <input type = "text" required 
+                placeholder = "Email"
+                [(ngModel)] = "model.email"
+                name = "email"/>
+
+            <input type = "number" required 
+                placeholder = "User Experience"
+                [(ngModel)] = "model.userExperience"
+                name = "userExperience"/>
+
+            <input type = "text" required 
+                placeholder = "Is Admin?"
+                [(ngModel)] = "model.isAdmin"
+                name = "isAdmin"/>
+
+            <button type ="submit">Submit</button>
+    </form>
+</div>

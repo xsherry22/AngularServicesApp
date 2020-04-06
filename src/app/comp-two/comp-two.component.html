@@ -1,1 +1,12 @@
-<p>comp-two works!</p>
+<br>
+<br>
+<br>
+<br>
+<button (click)="toggle()">Light Switch</button> 
+<br>
+<div [@onOff] = "isOn ? 'on' : 'off'" class = "my-container">
+    <p>The lights are now {{ isOn ? 'ON' : 'OFF' }}!</p>
+   
+   
+   
+</div>

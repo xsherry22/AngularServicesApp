@@ -7,6 +7,12 @@ import {
   transition,
 } from '@angular/animations';
 
+enum AnimationsType {
+    State = 0,
+    Animate = 1,
+    Style = 2
+}
+
 @Component({
   selector: 'app-comp-two',
   templateUrl: './comp-two.component.html',
@@ -46,5 +52,6 @@ export class CompTwoComponent implements OnInit {
   toggle(){
     this.isOn = !this.isOn;
   }
+
 
 }
